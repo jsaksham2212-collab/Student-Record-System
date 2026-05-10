@@ -67,6 +67,7 @@ def update_students():
     found = False
     for student in students:
         if student["Rollno"]==rollno:
+            #Name Validation
             while True:
                 student["Name"]= input("Enter New Name :")
                 if student["Name"].strip()=="":
@@ -75,7 +76,7 @@ def update_students():
                     print("Name should contain only letters")
                 else:
                     break
-
+            #Age Validation
             while True:
                 student["Age"]= input("Enter New Age :")
                 if student["Age"].isdigit() == False:
